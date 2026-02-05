@@ -7,9 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api": "npx openapi-typescript ./src/shared/api/schema/main.yaml -o ./src/shared/api/schema/generated.ts"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.90.20",
+    "openapi-fetch": "^0.15.0",
+    "openapi-react-query": "^0.5.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router": "^7.13.0"
@@ -26,10 +30,18 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
+    "msw": "^2.12.8",
+    "openapi-msw": "^2.0.0",
+    "openapi-typescript": "^7.10.1",
     "prettier": "^3.8.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.39.1",
     "vite": "^7.1.2",
     "vite-tsconfig-paths": "^6.0.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }

@@ -5,7 +5,7 @@ export const ROUTES = {
   LOGIN: "/login",
   REGISTER: "/register",
   BOARDS: "/boards",
-  BOARD: "/boards/:boardID",
+  BOARD: "/boards/:boardId",
 } as const;
 
 export type PathParams = {
